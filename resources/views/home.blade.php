@@ -6,8 +6,8 @@
         @foreach ( $products as $product)
         <div class="card">
             <div class="card-img-container" >
-              <img src="/img/{{ $product['frontImage'] }}" alt="1" class="img-a">
-              <img src="/img/{{ $product['backImage'] }}" alt="1b" class="img-b">
+              <img src="{{Vite::asset('resources/img/' . $product['frontImage']) }}" alt="1" class="img-a">
+              <img src="{{Vite::asset('resources/img/' . $product['backImage']) }}" alt="1b" class="img-b">
                <span class="hearts" {{--  :class="{ isFav }" @click="isFav = !isFav" --}}>&hearts;</span>
               {{--<span class="sale" v-if="discountValue">{{discountValue}}</span>
               <span class="sustain" v-if="sustainabilityBadge">{{sustainabilityBadge}}</span>--}}
